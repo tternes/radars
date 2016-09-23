@@ -1,0 +1,10 @@
+2016-09-23 16:45:45.489236 CrashScene[978:139476] [DYMTLInitPlatform] platform initialization successful
+2016-09-23 16:45:45.565020 CrashScene[978:139434] Metal GPU Frame Capture Enabled
+2016-09-23 16:45:45.565351 CrashScene[978:139434] Metal API Validation Enabled
+2016-09-23 16:46:00.413883 CrashScene[978:139434] [aurioc] 889: failed: '!pla' (enable 2, outf< 2 ch,      0 Hz, Float32, non-inter> inf< 2 ch,      0 Hz, Float32, non-inter>)
+2016-09-23 16:46:00.416171 CrashScene[978:139434] [aurioc] 889: failed: '!pla' (enable 2, outf< 2 ch,  44100 Hz, Float32, non-inter> inf< 2 ch,      0 Hz, Float32, non-inter>)
+2016-09-23 16:46:00.418123 CrashScene[978:139434] [central] 54:   ERROR:    [0x1b71eec40] >avae> AVAudioEngineGraph.mm:2515: PerformCommand: error 561015905
+2016-09-23 16:46:00.418550 CrashScene[978:139434] *** Terminating app due to uncaught exception 'com.apple.coreaudio.avfaudio', reason: 'error 561015905'
+*** First throw call stack:
+(0x1923841c0 0x190dbc55c 0x192384094 0x1ab99d78c 0x1ab9b1170 0x1ab9b1e58 0x1aba1f3a0 0x1aba1e6b0 0x1aba1e640 0x1a2134580 0x1a2118ff8 0x19231e22c 0x19231d930 0x19231d6ac 0x19238cb9c 0x19225fbf4 0x192d666bc 0x1982344a0 0x198459f40 0x1984683ec 0x198453ae8 0x19845376c 0x198785034 0x193ef7bd4 0x193f25904 0x193f25770 0x193f25b18 0x192332278 0x192331bc0 0x19232f7c0 0x19225e048 0x193ce1198 0x198237818 0x198232550 0x100035bfc 0x1912405b8)
+libc++abi.dylib: terminating with uncaught exception of type NSException

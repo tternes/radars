@@ -1,0 +1,335 @@
+Incident Identifier: FA09C419-0AE8-431F-9D7B-BDC4047EE04E
+CrashReporter Key:   b9c12ffc5462160f5141c50f68bd7a6d6139e3f9
+Hardware Model:      iPhone8,2
+Process:             CrashScene [1002]
+Path:                /private/var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/CrashScene
+Identifier:          co.bluetoo.HomeKitDemo
+Version:             1 (1.0)
+Code Type:           ARM-64 (Native)
+Role:                Non UI
+Parent Process:      launchd [1]
+Coalition:           co.bluetoo.HomeKitDemo [1183]
+
+
+Date/Time:           2016-09-23 16:56:53.4365 -0500
+Launch Time:         2016-09-23 16:55:06.7266 -0500
+OS Version:          iPhone OS 10.0.1 (14A403)
+Report Version:      104
+
+Exception Type:  EXC_CRASH (SIGABRT)
+Exception Codes: 0x0000000000000000, 0x0000000000000000
+Exception Note:  EXC_CORPSE_NOTIFY
+Triggered by Thread:  0
+
+Application Specific Information:
+abort() called
+
+Filtered syslog:
+None found
+
+Last Exception Backtrace:
+0   CoreFoundation                	0x1923841c0 __exceptionPreprocess + 124
+1   libobjc.A.dylib               	0x190dbc55c objc_exception_throw + 56
+2   CoreFoundation                	0x192384094 +[NSException raise:format:arguments:] + 104
+3   AVFAudio                      	0x1ab99d78c AVAE_RaiseException(NSString*, ...) + 60
+4   AVFAudio                      	0x1ab9b1170 AVAudioEngineGraph::PerformCommand(AUGraphNode&, AVAudioEngineGraph::ENodeCommand, void*, unsigned int) const + 1316
+5   AVFAudio                      	0x1ab9b1e58 AVAudioEngineGraph::Initialize() + 508
+6   AVFAudio                      	0x1aba1f3a0 AVAudioEngineImpl::Initialize() + 36
+7   AVFAudio                      	0x1aba1e6b0 AVAudioEngineImpl::Start(NSError**) + 28
+8   AVFAudio                      	0x1aba1e640 -[AVAudioEngine startAndReturnError:] + 84
+9   SceneKit                      	0x1a2134580 CPP3DAudioEngine::GetAVEngine() + 140
+10  SceneKit                      	0x1a2118ff8 -[SCNView _enterBackground:] + 56
+11  CoreFoundation                	0x19231e22c __CFNOTIFICATIONCENTER_IS_CALLING_OUT_TO_AN_OBSERVER__ + 20
+12  CoreFoundation                	0x19231d930 _CFXRegistrationPost + 400
+13  CoreFoundation                	0x19231d6ac ___CFXNotificationPost_block_invoke + 60
+14  CoreFoundation                	0x19238cb9c -[_CFXNotificationRegistrar find:object:observer:enumerator:] + 1504
+15  CoreFoundation                	0x19225fbf4 _CFXNotificationPost + 376
+16  Foundation                    	0x192d666bc -[NSNotificationCenter postNotificationName:object:userInfo:] + 68
+17  UIKit                         	0x1982344a0 -[UIApplication _deactivateForReason:notify:] + 828
+18  UIKit                         	0x198459f40 -[UIApplication _handleApplicationDeactivationWithScene:shouldForceExit:transitionContext:completion:] + 364
+19  UIKit                         	0x1984683ec -[UIApplication _handleApplicationLifecycleEventWithScene:transitionContext:completion:] + 452
+20  UIKit                         	0x198453ae8 __70-[UIApplication scene:didUpdateWithDiff:transitionContext:completion:]_block_invoke + 152
+21  UIKit                         	0x19845376c -[UIApplication scene:didUpdateWithDiff:transitionContext:completion:] + 888
+22  UIKit                         	0x198785034 -[UIApplicationSceneClientAgent scene:handleEvent:withCompletion:] + 464
+23  FrontBoardServices            	0x193ef7bd4 __80-[FBSSceneImpl updater:didUpdateSettings:withDiff:transitionContext:completion:]_block_invoke.376 + 208
+24  FrontBoardServices            	0x193f25904 __FBSSERIALQUEUE_IS_CALLING_OUT_TO_A_BLOCK__ + 36
+25  FrontBoardServices            	0x193f25770 -[FBSSerialQueue _performNext] + 176
+26  FrontBoardServices            	0x193f25b18 -[FBSSerialQueue _performNextFromRunLoopSource] + 56
+27  CoreFoundation                	0x192332278 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 24
+28  CoreFoundation                	0x192331bc0 __CFRunLoopDoSources0 + 524
+29  CoreFoundation                	0x19232f7c0 __CFRunLoopRun + 804
+30  CoreFoundation                	0x19225e048 CFRunLoopRunSpecific + 444
+31  GraphicsServices              	0x193ce1198 GSEventRunModal + 180
+32  UIKit                         	0x198237818 -[UIApplication _run] + 684
+33  UIKit                         	0x198232550 UIApplicationMain + 208
+34  CrashScene                    	0x100011bfc 0x100008000 + 39932
+35  libdyld.dylib                 	0x1912405b8 start + 4
+
+
+Thread 0 name:  Dispatch queue: com.apple.main-thread
+Thread 0 Crashed:
+0   libsystem_kernel.dylib        	0x0000000191352014 __pthread_kill + 8
+1   libsystem_pthread.dylib       	0x0000000191419460 pthread_kill + 112
+2   libsystem_c.dylib             	0x00000001912c63f4 abort + 140
+3   libc++abi.dylib               	0x0000000190d912d4 __cxa_bad_cast + 0
+4   libc++abi.dylib               	0x0000000190daecc0 default_unexpected_handler() + 0
+5   libobjc.A.dylib               	0x0000000190dbc844 _objc_terminate() + 124
+6   libc++abi.dylib               	0x0000000190dab66c std::__terminate(void (*)()) + 16
+7   libc++abi.dylib               	0x0000000190dab234 __cxa_rethrow + 144
+8   libobjc.A.dylib               	0x0000000190dbc71c objc_exception_rethrow + 44
+9   CoreFoundation                	0x000000019225e0bc CFRunLoopRunSpecific + 560
+10  GraphicsServices              	0x0000000193ce1198 GSEventRunModal + 180
+11  UIKit                         	0x0000000198237818 -[UIApplication _run] + 684
+12  UIKit                         	0x0000000198232550 UIApplicationMain + 208
+13  CrashScene                    	0x0000000100011bfc 0x100008000 + 39932
+14  libdyld.dylib                 	0x00000001912405b8 start + 4
+
+Thread 1 name:  com.apple.uikit.eventfetch-thread
+Thread 1:
+0   libsystem_kernel.dylib        	0x000000019133416c mach_msg_trap + 8
+1   libsystem_kernel.dylib        	0x0000000191333fdc mach_msg + 72
+2   CoreFoundation                	0x0000000192331cec __CFRunLoopServiceMachPort + 192
+3   CoreFoundation                	0x000000019232f908 __CFRunLoopRun + 1132
+4   CoreFoundation                	0x000000019225e048 CFRunLoopRunSpecific + 444
+5   Foundation                    	0x0000000192d6cb1c -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 304
+6   Foundation                    	0x0000000192d8d60c -[NSRunLoop(NSRunLoop) runUntilDate:] + 96
+7   UIKit                         	0x0000000198bace6c -[UIEventFetcher threadMain] + 136
+8   Foundation                    	0x0000000192e6a50c __NSThread__start__ + 1024
+9   libsystem_pthread.dylib       	0x0000000191417860 _pthread_body + 240
+10  libsystem_pthread.dylib       	0x0000000191417770 _pthread_body + 0
+11  libsystem_pthread.dylib       	0x0000000191414dbc thread_start + 4
+
+Thread 2:
+0   libsystem_kernel.dylib        	0x0000000191352a88 __workq_kernreturn + 8
+1   libsystem_pthread.dylib       	0x000000019141536c _pthread_wqthread + 1452
+2   libsystem_pthread.dylib       	0x0000000191414db4 start_wqthread + 4
+
+Thread 3:
+0   libsystem_kernel.dylib        	0x0000000191352a88 __workq_kernreturn + 8
+1   libsystem_pthread.dylib       	0x000000019141536c _pthread_wqthread + 1452
+2   libsystem_pthread.dylib       	0x0000000191414db4 start_wqthread + 4
+
+Thread 4:
+0   libsystem_kernel.dylib        	0x0000000191352a88 __workq_kernreturn + 8
+1   libsystem_pthread.dylib       	0x0000000191415188 _pthread_wqthread + 968
+2   libsystem_pthread.dylib       	0x0000000191414db4 start_wqthread + 4
+
+Thread 5:
+0   libsystem_kernel.dylib        	0x0000000191352a88 __workq_kernreturn + 8
+1   libsystem_pthread.dylib       	0x000000019141536c _pthread_wqthread + 1452
+2   libsystem_pthread.dylib       	0x0000000191414db4 start_wqthread + 4
+
+Thread 6:
+0   libsystem_kernel.dylib        	0x00000001913341c0 semaphore_timedwait_trap + 8
+1   libdispatch.dylib             	0x000000019121f784 _dispatch_semaphore_wait_slow + 112
+2   libdispatch.dylib             	0x000000019121e81c _dispatch_worker_thread + 268
+3   libsystem_pthread.dylib       	0x0000000191417860 _pthread_body + 240
+4   libsystem_pthread.dylib       	0x0000000191417770 _pthread_body + 0
+5   libsystem_pthread.dylib       	0x0000000191414dbc thread_start + 4
+
+Thread 0 crashed with ARM Thread State (64-bit):
+    x0: 0x0000000000000000   x1: 0x0000000000000000   x2: 0x0000000000000000   x3: 0x00000001740f9d37
+    x4: 0x0000000190dafbc3   x5: 0x000000016fdf7520   x6: 0x000000000000006e   x7: 0xffffffffffffffec
+    x8: 0x0000000008000000   x9: 0x0000000004000000  x10: 0x000000000000000b  x11: 0x0000000000000010
+   x12: 0x00000001912dd792  x13: 0x0000000000000000  x14: 0x0000030000000300  x15: 0x0000000000000000
+   x16: 0x0000000000000148  x17: 0x0000000000000000  x18: 0x0000000000000000  x19: 0x0000000000000006
+   x20: 0x00000001b71eec40  x21: 0x000000016fdf7520  x22: 0x00000001b71f5bb8  x23: 0x0000000000000001
+   x24: 0x000000017001e820  x25: 0x0000000000000000  x26: 0x0000000000000001  x27: 0x0000000000000000
+   x28: 0x000000016fdf7bd0   fp: 0x000000016fdf7480   lr: 0x0000000191419460
+    sp: 0x000000016fdf7460   pc: 0x0000000191352014 cpsr: 0x00000000
+
+Binary Images:
+0x100008000 - 0x100013fff CrashScene arm64  <f114a8962bff3540a3ad20468a86e2f4> /var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/CrashScene
+0x100024000 - 0x100033fff libswiftCoreGraphics.dylib arm64  <1426b26ab021337f908cbf9a86c482f0> /var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/Frameworks/libswiftCoreGraphics.dylib
+0x100050000 - 0x100057fff libswiftCoreImage.dylib arm64  <2566bcc80e993f5bb86b22a1b15803de> /var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/Frameworks/libswiftCoreImage.dylib
+0x100060000 - 0x100067fff libswiftDarwin.dylib arm64  <84be54efa8ef3fd0a6b574c5b931ad87> /var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/Frameworks/libswiftDarwin.dylib
+0x100078000 - 0x100093fff libswiftDispatch.dylib arm64  <6876f03e334c300c8ee3126bcb312219> /var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/Frameworks/libswiftDispatch.dylib
+0x1000d8000 - 0x100107fff dyld arm64  <fc8715469f7b30228b67a5ae12cadf10> /usr/lib/dyld
+0x10015c000 - 0x100377fff libswiftCore.dylib arm64  <17ea2138fbe232759f642dea8a84befe> /var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/Frameworks/libswiftCore.dylib
+0x1005f0000 - 0x1006affff libswiftFoundation.dylib arm64  <b4c6e01c18983b9792c9bf772fb9ad5c> /var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/Frameworks/libswiftFoundation.dylib
+0x1007a8000 - 0x1007affff libswiftGLKit.dylib arm64  <44902f70dd5132f2b696593ae38c1dbb> /var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/Frameworks/libswiftGLKit.dylib
+0x1007bc000 - 0x1007c3fff libswiftObjectiveC.dylib arm64  <84eb3700259d3cf799b05c9935373084> /var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/Frameworks/libswiftObjectiveC.dylib
+0x1007d0000 - 0x1007d7fff libswiftSceneKit.dylib arm64  <bc3e5bb7b5493068b2c6e2519d018628> /var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/Frameworks/libswiftSceneKit.dylib
+0x1007e4000 - 0x1007effff libswiftUIKit.dylib arm64  <ce29993d6ef234ca9a45b2b1c3fe0895> /var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/Frameworks/libswiftUIKit.dylib
+0x100800000 - 0x100823fff libswiftsimd.dylib arm64  <f6c2c573ae1b33f2b61b53f8d5c17f9d> /var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/Frameworks/libswiftsimd.dylib
+0x10084c000 - 0x100853fff libswiftCoreMedia.dylib arm64  <c928777b596d36a79541fd46c4c7c72c> /var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/Frameworks/libswiftCoreMedia.dylib
+0x100860000 - 0x10086bfff libswiftCoreAudio.dylib arm64  <48e7fdc0f9d23e31b3aa81c8e70e1e67> /var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/Frameworks/libswiftCoreAudio.dylib
+0x100880000 - 0x100887fff libswiftos.dylib arm64  <b237a2add8293f798f6fb6cf64c3a462> /var/containers/Bundle/Application/00E7D4DC-E938-4A71-875F-E25C05BB173A/CrashScene.app/Frameworks/libswiftos.dylib
+0x190d38000 - 0x190d39fff libSystem.B.dylib arm64  <8788325e11bc31a39b075a3497d26ebd> /usr/lib/libSystem.B.dylib
+0x190d3a000 - 0x190d8ffff libc++.1.dylib arm64  <95f6dd603b933208ba95cc2d84613c54> /usr/lib/libc++.1.dylib
+0x190d90000 - 0x190db0fff libc++abi.dylib arm64  <286b3adc78d1308eaa0d6f10914b1fa7> /usr/lib/libc++abi.dylib
+0x190db4000 - 0x19118dfff libobjc.A.dylib arm64  <56adf6a5a61b3ef1968bae3dd66e4893> /usr/lib/libobjc.A.dylib
+0x19118e000 - 0x191192fff libcache.dylib arm64  <4073ffab5dee3540b91e3ea1292d4944> /usr/lib/system/libcache.dylib
+0x191193000 - 0x19119efff libcommonCrypto.dylib arm64  <cbc60c6bf6843b489a4d4b47bc9caba8> /usr/lib/system/libcommonCrypto.dylib
+0x19119f000 - 0x1911a2fff libcompiler_rt.dylib arm64  <6b7d58fa13473277aae76d339b13a724> /usr/lib/system/libcompiler_rt.dylib
+0x1911a3000 - 0x1911aafff libcopyfile.dylib arm64  <2130e1083c2b31498e4873b42c01a87c> /usr/lib/system/libcopyfile.dylib
+0x1911ab000 - 0x19120bfff libcorecrypto.dylib arm64  <69592d5de33d337baf0746846b8e8b71> /usr/lib/system/libcorecrypto.dylib
+0x19120c000 - 0x19123bfff libdispatch.dylib arm64  <9da4900c6d953655bbfcc6b31c990e9c> /usr/lib/system/libdispatch.dylib
+0x19123c000 - 0x191240fff libdyld.dylib arm64  <b69bc0979de93e7c9cac9d89b284039f> /usr/lib/system/libdyld.dylib
+0x191241000 - 0x191241fff liblaunch.dylib arm64  <7e180d7e5df13f699dbc6bb79ad46116> /usr/lib/system/liblaunch.dylib
+0x191242000 - 0x191247fff libmacho.dylib arm64  <40cb3d5ba75831cdac02a56cab260364> /usr/lib/system/libmacho.dylib
+0x191248000 - 0x191249fff libremovefile.dylib arm64  <58f887789b983f71a5cfd5777958da77> /usr/lib/system/libremovefile.dylib
+0x19124a000 - 0x191261fff libsystem_asl.dylib arm64  <2ec01cd41fa73c94b3f0ba16aacd3858> /usr/lib/system/libsystem_asl.dylib
+0x191262000 - 0x191262fff libsystem_blocks.dylib arm64  <e49693e120c33ee580a602e909c83abe> /usr/lib/system/libsystem_blocks.dylib
+0x191263000 - 0x1912e1fff libsystem_c.dylib arm64  <051c0135e5d835979ce0166c05c8f381> /usr/lib/system/libsystem_c.dylib
+0x1912e2000 - 0x1912e6fff libsystem_configuration.dylib arm64  <c253d3f37bac39bcb755bd85f8c6b7fd> /usr/lib/system/libsystem_configuration.dylib
+0x1912e7000 - 0x1912ecfff libsystem_containermanager.dylib arm64  <a845710abeb9350596b19219de14752d> /usr/lib/system/libsystem_containermanager.dylib
+0x1912ed000 - 0x1912eefff libsystem_coreservices.dylib arm64  <e10d8ff725fe3a88a5328b24666b4d34> /usr/lib/system/libsystem_coreservices.dylib
+0x1912ef000 - 0x191307fff libsystem_coretls.dylib arm64  <23df3c03932932869f59404b025c3153> /usr/lib/system/libsystem_coretls.dylib
+0x191308000 - 0x19130efff libsystem_dnssd.dylib arm64  <441464753206379bafd15b113907f608> /usr/lib/system/libsystem_dnssd.dylib
+0x19130f000 - 0x191332fff libsystem_info.dylib arm64  <2e66f9d1ee0837ff895155dd12b2c956> /usr/lib/system/libsystem_info.dylib
+0x191333000 - 0x191357fff libsystem_kernel.dylib arm64  <04e6664af08030e1ad7d9f2249e47e18> /usr/lib/system/libsystem_kernel.dylib
+0x191358000 - 0x191384fff libsystem_m.dylib arm64  <786e37b9fc8431f5bfb79550eed0c3ce> /usr/lib/system/libsystem_m.dylib
+0x191385000 - 0x1913a0fff libsystem_malloc.dylib arm64  <6eef211324863711a1d99713c51512cb> /usr/lib/system/libsystem_malloc.dylib
+0x1913a1000 - 0x1913f7fff libsystem_network.dylib arm64  <84d56a9d88ba32f9830d884a7aa14c3b> /usr/lib/system/libsystem_network.dylib
+0x1913f8000 - 0x191401fff libsystem_networkextension.dylib arm64  <a8d963518d643327ac1991dbf8f15f91> /usr/lib/system/libsystem_networkextension.dylib
+0x191402000 - 0x19140cfff libsystem_notify.dylib arm64  <abb481f869e83db39d0ee3e61a9c0554> /usr/lib/system/libsystem_notify.dylib
+0x19140d000 - 0x191413fff libsystem_platform.dylib arm64  <6735814899ed328499ce8a0f59ff49b6> /usr/lib/system/libsystem_platform.dylib
+0x191414000 - 0x19141dfff libsystem_pthread.dylib arm64  <be17c5de3ff83a8695913479341c34ec> /usr/lib/system/libsystem_pthread.dylib
+0x19141e000 - 0x191421fff libsystem_sandbox.dylib arm64  <f269179060d53feaaac004e7c838b44d> /usr/lib/system/libsystem_sandbox.dylib
+0x191422000 - 0x191429fff libsystem_symptoms.dylib arm64  <2e6f3a69a33a3a309ca86ef8358c2b55> /usr/lib/system/libsystem_symptoms.dylib
+0x19142a000 - 0x19144bfff libsystem_trace.dylib arm64  <3ed1ebdc2ed435dc87973ddbf563744b> /usr/lib/system/libsystem_trace.dylib
+0x19144c000 - 0x191451fff libunwind.dylib arm64  <8e51acc655103210bcd8c557e4f103ab> /usr/lib/system/libunwind.dylib
+0x191452000 - 0x191452fff libvminterpose.dylib arm64  <abee403ad3fe3b428af3d4ed901a2dfc> /usr/lib/system/libvminterpose.dylib
+0x191453000 - 0x191479fff libxpc.dylib arm64  <9bbf09cd8cfd3f94bae40fac797416e0> /usr/lib/system/libxpc.dylib
+0x19147a000 - 0x191694fff libicucore.A.dylib arm64  <49bff0b83e023804af2b53d77d1f6cb4> /usr/lib/libicucore.A.dylib
+0x191695000 - 0x1916a5fff libz.1.dylib arm64  <5e67d9e80348304187cd8bf557849015> /usr/lib/libz.1.dylib
+0x192255000 - 0x1925d8fff CoreFoundation arm64  <c4824900d70e3fd5b01dbb079b63eae1> /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+0x1925d9000 - 0x1925e9fff libbsm.0.dylib arm64  <f3a3eb26182839e0ac4646d0e2f9e9c4> /usr/lib/libbsm.0.dylib
+0x1925ea000 - 0x1925eafff libenergytrace.dylib arm64  <2cfdece2a96330968c249f7d9e7811ad> /usr/lib/libenergytrace.dylib
+0x1925eb000 - 0x192665fff IOKit arm64  <27c8e5eb76843818abd4a0b0d5dfccc3> /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+0x192666000 - 0x192686fff libMobileGestalt.dylib arm64  <f8456dbddfbb35d29491c29b43860e6f> /usr/lib/libMobileGestalt.dylib
+0x192687000 - 0x192771fff libxml2.2.dylib arm64  <edc3ce1ed39b39fd9c3c535d9e542967> /usr/lib/libxml2.2.dylib
+0x192772000 - 0x1927fefff Security arm64  <624164bf18ba32c8a7f28b5031ef6aa5> /System/Library/Frameworks/Security.framework/Security
+0x1927ff000 - 0x192869fff SystemConfiguration arm64  <486dd4e417a83cc6a09e0b7de9319356> /System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+0x19286a000 - 0x19297efff libsqlite3.dylib arm64  <511215637edc3a0f8d3416fe4536881d> /usr/lib/libsqlite3.dylib
+0x19297f000 - 0x192ceefff CFNetwork arm64  <ca09941bfd353bb8b6b679a0f14cad1e> /System/Library/Frameworks/CFNetwork.framework/CFNetwork
+0x192cef000 - 0x192cfffff libbz2.1.0.dylib arm64  <b312e3b393893c0db8f793f370dae319> /usr/lib/libbz2.1.0.dylib
+0x192d00000 - 0x192d18fff liblzma.5.dylib arm64  <3c157ec9f2e83f99a26f322feb7deabc> /usr/lib/liblzma.5.dylib
+0x192d19000 - 0x192d33fff libCRFSuite.dylib arm64  <af22ff8591193afa81d6d044c5cd7978> /usr/lib/libCRFSuite.dylib
+0x192d34000 - 0x192d5dfff libarchive.2.dylib arm64  <1e4278f3e3323387ac5c90f975232c07> /usr/lib/libarchive.2.dylib
+0x192d5e000 - 0x192d5ffff liblangid.dylib arm64  <c2cccb75f84e3b8a9c2ce6e32e812eb9> /usr/lib/liblangid.dylib
+0x192d60000 - 0x19302efff Foundation arm64  <a6ad10553017396ebb4eba2a4ad331d8> /System/Library/Frameworks/Foundation.framework/Foundation
+0x19302f000 - 0x1930dbfff libBLAS.dylib arm64  <499c291219e730d79cf409daee75db9d> /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libBLAS.dylib
+0x1930dc000 - 0x19341efff libLAPACK.dylib arm64  <f07da3926d4a3fb0bfcbe3b3b026b54f> /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libLAPACK.dylib
+0x19341f000 - 0x1936c1fff vImage arm64  <c3827fd6a2763bb9bf22e65906eb3cfc> /System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/vImage
+0x1936c2000 - 0x1936e4fff libvMisc.dylib arm64  <bd641d6b451430a8a26dde179a9bfc4a> /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvMisc.dylib
+0x1936e5000 - 0x1936f9fff libLinearAlgebra.dylib arm64  <e9a40ae4066c3d3ebab7aec269c6f69e> /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libLinearAlgebra.dylib
+0x1936fa000 - 0x19370bfff libSparseBLAS.dylib arm64  <66e35a109b573fe98941afd7e9921214> /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libSparseBLAS.dylib
+0x19370c000 - 0x193784fff libvDSP.dylib arm64  <c2ce3490f1b633119d556081ffd0caa0> /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvDSP.dylib
+0x193785000 - 0x193785fff vecLib arm64  <c07ed4a995bd35a89bea45c4fd101553> /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/vecLib
+0x193786000 - 0x193786fff Accelerate arm64  <5057f428ad8539a9b13b2a607bc7839f> /System/Library/Frameworks/Accelerate.framework/Accelerate
+0x193787000 - 0x193cd4fff CoreGraphics arm64  <4a137515f15e30a495edf7ec114755e0> /System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+0x193cd5000 - 0x193ce9fff GraphicsServices arm64  <1e0ed9315f4830088aa2086205f45050> /System/Library/PrivateFrameworks/GraphicsServices.framework/GraphicsServices
+0x193cea000 - 0x193d35fff AppSupport arm64  <1fd5606d67de38b484c8e09e0783b4af> /System/Library/PrivateFrameworks/AppSupport.framework/AppSupport
+0x193d36000 - 0x193e56fff MobileCoreServices arm64  <37baec08da073e729066bded8c9b53da> /System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+0x193e57000 - 0x193eadfff BaseBoard arm64  <160dad81a8de3c5cb46f17c3d4eb7b87> /System/Library/PrivateFrameworks/BaseBoard.framework/BaseBoard
+0x193eae000 - 0x193eb9fff AssertionServices arm64  <3fac49b1df4c373184edb6af5d3a09dd> /System/Library/PrivateFrameworks/AssertionServices.framework/AssertionServices
+0x193eba000 - 0x193ee6fff BackBoardServices arm64  <b531352894cd36bbbb6d0b9d503566a7> /System/Library/PrivateFrameworks/BackBoardServices.framework/BackBoardServices
+0x193eeb000 - 0x193f3afff FrontBoardServices arm64  <ab6f6b73222d33649143078b79886d31> /System/Library/PrivateFrameworks/FrontBoardServices.framework/FrontBoardServices
+0x193f3e000 - 0x193f74fff SpringBoardServices arm64  <b575c6c21a493b4a87e2dd05bb8cf02a> /System/Library/PrivateFrameworks/SpringBoardServices.framework/SpringBoardServices
+0x193f75000 - 0x193f8cfff MobileKeyBag arm64  <734ebf66412c3aa5ac99334f29ebe620> /System/Library/PrivateFrameworks/MobileKeyBag.framework/MobileKeyBag
+0x193f8d000 - 0x193f95fff IOSurface arm64  <0c687f05288f30efbb936e54be9a6f58> /System/Library/PrivateFrameworks/IOSurface.framework/IOSurface
+0x193f96000 - 0x193fa1fff liblockdown.dylib arm64  <12947e09f9ca3245ae33ede73e0b651f> /usr/lib/liblockdown.dylib
+0x193fa2000 - 0x193fb7fff CrashReporterSupport arm64  <b17ade4774223014893f614b1d14de61> /System/Library/PrivateFrameworks/CrashReporterSupport.framework/CrashReporterSupport
+0x193fb8000 - 0x193fbafff IOSurfaceAccelerator arm64  <969c522dc6183cb8ada7073b07353512> /System/Library/PrivateFrameworks/IOSurfaceAccelerator.framework/IOSurfaceAccelerator
+0x193fbb000 - 0x193ffbfff AppleJPEG arm64  <ddac80f526a73d5684ad96a7faeac161> /System/Library/PrivateFrameworks/AppleJPEG.framework/AppleJPEG
+0x193ffc000 - 0x19458bfff ImageIO arm64  <0cc6da0a6265372190bd34b428c02a9f> /System/Library/Frameworks/ImageIO.framework/ImageIO
+0x19458c000 - 0x194592fff TCC arm64  <fca78b84e3f73fdc90b9d1e5d5ff6919> /System/Library/PrivateFrameworks/TCC.framework/TCC
+0x194593000 - 0x194597fff AggregateDictionary arm64  <621603daf2bf3e7ab75aafd59f095c5b> /System/Library/PrivateFrameworks/AggregateDictionary.framework/AggregateDictionary
+0x194598000 - 0x1945a4fff PowerLog arm64  <c2cd0fdbbf6e385ba55748201f88a7a3> /System/Library/PrivateFrameworks/PowerLog.framework/PowerLog
+0x1945a5000 - 0x19460dfff libTelephonyUtilDynamic.dylib arm64  <1af42608ce2b3f4ebcee64dcdbac02b6> /usr/lib/libTelephonyUtilDynamic.dylib
+0x19460e000 - 0x194620fff CommonUtilities arm64  <0098d095d66733988b5a6e73803f37a6> /System/Library/PrivateFrameworks/CommonUtilities.framework/CommonUtilities
+0x194621000 - 0x194635fff libcompression.dylib arm64  <b04eddd5ef0839a6aee2707f5c14aa1a> /usr/lib/libcompression.dylib
+0x194636000 - 0x1948d0fff CoreData arm64  <65f30a82a6683482bbdb857c83f3fc56> /System/Library/Frameworks/CoreData.framework/CoreData
+0x1948d1000 - 0x1948d4fff libCoreVMClient.dylib arm64  <ef615871768f3db8b7f860b5fd7bf707> /System/Library/Frameworks/OpenGLES.framework/libCoreVMClient.dylib
+0x1948d5000 - 0x1948dafff IOAccelerator arm64  <d7135a13f4753c9eb8b4b79455175d32> /System/Library/PrivateFrameworks/IOAccelerator.framework/IOAccelerator
+0x1948db000 - 0x1948dcfff libCVMSPluginSupport.dylib arm64  <a5694c66e17b346ca36396fd40029618> /System/Library/Frameworks/OpenGLES.framework/libCVMSPluginSupport.dylib
+0x1948dd000 - 0x1948e0fff libCoreFSCache.dylib arm64  <7d0b5c6277ea362598ea9c06f292eaa0> /System/Library/Frameworks/OpenGLES.framework/libCoreFSCache.dylib
+0x1948e1000 - 0x194924fff libGLImage.dylib arm64  <679d74c254e13f1c925f38b82d8e6963> /System/Library/Frameworks/OpenGLES.framework/libGLImage.dylib
+0x194925000 - 0x19492ffff libGFXShared.dylib arm64  <402e4f5820f834f5807f5fa448902f2c> /System/Library/Frameworks/OpenGLES.framework/libGFXShared.dylib
+0x194930000 - 0x194937fff IOMobileFramebuffer arm64  <c913022952a1394a928f7bbf5bfec3e9> /System/Library/PrivateFrameworks/IOMobileFramebuffer.framework/IOMobileFramebuffer
+0x194938000 - 0x194938fff libmetal_timestamp.dylib arm64  <fd7029ad82583e1f89ca3a1ddff84df2> /System/Library/PrivateFrameworks/GPUCompiler.framework/libmetal_timestamp.dylib
+0x194939000 - 0x194996fff Metal arm64  <18991406aed530c99a3dcca4ca4371b8> /System/Library/Frameworks/Metal.framework/Metal
+0x194997000 - 0x1949a1fff OpenGLES arm64  <48579b12ba843baf8688c929e4aa1350> /System/Library/Frameworks/OpenGLES.framework/OpenGLES
+0x1949a2000 - 0x1949c6fff CoreVideo arm64  <865a7204d95b3117bf535727201a1da9> /System/Library/Frameworks/CoreVideo.framework/CoreVideo
+0x1949c7000 - 0x1949c9fff OAuth arm64  <f202cfb14ee333f1a7502e5a75f2df92> /System/Library/PrivateFrameworks/OAuth.framework/OAuth
+0x1949d1000 - 0x194a0ffff Accounts arm64  <79664bb249ab30799fdce891cf8a91cd> /System/Library/Frameworks/Accounts.framework/Accounts
+0x194a10000 - 0x194b02fff libiconv.2.dylib arm64  <bf0bd341bdd43ec7bd40d067233e57a8> /usr/lib/libiconv.2.dylib
+0x194b03000 - 0x194c4efff CoreAudio arm64  <0a134f19c9ae39b79dcdd8af00189b56> /System/Library/Frameworks/CoreAudio.framework/CoreAudio
+0x194c4f000 - 0x194c52fff UserFS arm64  <c0a53a908768398cb07c22ec2ff1abb2> /System/Library/PrivateFrameworks/UserFS.framework/UserFS
+0x194c53000 - 0x194d5dfff CoreMedia arm64  <d0cc03900e45378e98d8193662edf565> /System/Library/Frameworks/CoreMedia.framework/CoreMedia
+0x194d5e000 - 0x194d64fff libcupolicy.dylib arm64  <eb3aabbf27dc306bbb6854b2171294b4> /usr/lib/libcupolicy.dylib
+0x194d65000 - 0x194df1fff CoreTelephony arm64  <56c8f396f22837d6a666219935ed5d2e> /System/Library/Frameworks/CoreTelephony.framework/CoreTelephony
+0x194df2000 - 0x194efcfff libFontParser.dylib arm64  <7a8928d14bd538b29f9c8d2be8fb889a> /System/Library/PrivateFrameworks/FontServices.framework/libFontParser.dylib
+0x194efd000 - 0x194f8cfff VideoToolbox arm64  <63305fbde9b03b7891bb48b8868f4f36> /System/Library/Frameworks/VideoToolbox.framework/VideoToolbox
+0x194f8d000 - 0x194f8dfff FontServices arm64  <c6d2054d8d013dbdafecea3ad8948d76> /System/Library/PrivateFrameworks/FontServices.framework/FontServices
+0x194f8e000 - 0x1950dafff CoreText arm64  <89e2f40a358a3760885d80ebb4491ac1> /System/Library/Frameworks/CoreText.framework/CoreText
+0x1950f6000 - 0x19511efff PersistentConnection arm64  <46122ee81ebc3ae0a60ae25c730a129e> /System/Library/PrivateFrameworks/PersistentConnection.framework/PersistentConnection
+0x19511f000 - 0x195125fff DataMigration arm64  <0aa788c904ca304ea9a9bf19ee990b53> /System/Library/PrivateFrameworks/DataMigration.framework/DataMigration
+0x195126000 - 0x19557cfff AudioToolbox arm64  <f1ac89ed6113395bb6f8d9eef1b345dc> /System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+0x19557d000 - 0x195754fff QuartzCore arm64  <dfdc0c40cf153854b84a6bc06b12b4ea> /System/Library/Frameworks/QuartzCore.framework/QuartzCore
+0x195755000 - 0x19575bfff Netrb arm64  <019a8ba8af39378891e3689409db009d> /System/Library/PrivateFrameworks/Netrb.framework/Netrb
+0x19575c000 - 0x19576cfff libcmph.dylib arm64  <ddb74cea99f83aeb9332a789afb36b35> /usr/lib/libcmph.dylib
+0x19576d000 - 0x19578dfff libmis.dylib arm64  <039e7c4ab2c53597ba3403fc0b5516e3> /usr/lib/libmis.dylib
+0x19578e000 - 0x19587ffff LanguageModeling arm64  <1399d8b96350301ead6b2c824fbb7c53> /System/Library/PrivateFrameworks/LanguageModeling.framework/LanguageModeling
+0x195880000 - 0x195965fff ManagedConfiguration arm64  <083f833136993b47bee913c927ee65de> /System/Library/PrivateFrameworks/ManagedConfiguration.framework/ManagedConfiguration
+0x195966000 - 0x19597cfff libmarisa.dylib arm64  <39ff439cc20b3c8e9e6055c0678506e5> /usr/lib/libmarisa.dylib
+0x19597d000 - 0x195a4dfff ProofReader arm64  <88e0eab61d173a318afb6c85b7a1a2d0> /System/Library/PrivateFrameworks/ProofReader.framework/ProofReader
+0x195a4e000 - 0x195a58fff MediaAccessibility arm64  <4cdf6c8a21143e04838c8985ca3ab8a2> /System/Library/Frameworks/MediaAccessibility.framework/MediaAccessibility
+0x195a59000 - 0x195a69fff MobileAsset arm64  <0c5fb05c798b3a8cabbace58bc7b0ec1> /System/Library/PrivateFrameworks/MobileAsset.framework/MobileAsset
+0x195a6a000 - 0x195adbfff ColorSync arm64  <5762d9f6aa723c5f9ac4faf32c313791> /System/Library/PrivateFrameworks/ColorSync.framework/ColorSync
+0x195adc000 - 0x195b4bfff MetalPerformanceShaders arm64  <5d6f9961367c3336a19b5283176262df> /System/Library/Frameworks/MetalPerformanceShaders.framework/MetalPerformanceShaders
+0x195b4c000 - 0x195f7bfff FaceCore arm64  <c6528cdf6e1d3fe48f12735bbc8fe99f> /System/Library/PrivateFrameworks/FaceCore.framework/FaceCore
+0x195f7c000 - 0x195ff7fff Quagga arm64  <9f220dabf92e372bb1851251b1f66fe1> /System/Library/PrivateFrameworks/Quagga.framework/Quagga
+0x195ff8000 - 0x1961c1fff CoreImage arm64  <0a9f9730278e31e19e59bdcabfcb6ff1> /System/Library/Frameworks/CoreImage.framework/CoreImage
+0x1961c2000 - 0x19620dfff TextInput arm64  <d1a353ce89983a7dac86d75f384bce7f> /System/Library/PrivateFrameworks/TextInput.framework/TextInput
+0x19620e000 - 0x19621efff libAccessibility.dylib arm64  <306f29d3df4c32cb923e6e5a136b9c67> /usr/lib/libAccessibility.dylib
+0x19622d000 - 0x196b83fff JavaScriptCore arm64  <3a74efcce7283410ac8a55027b67d2ef> /System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore
+0x196d9a000 - 0x197e88fff WebCore arm64  <5f4c0a6773123239905a48919249deff> /System/Library/PrivateFrameworks/WebCore.framework/WebCore
+0x197e89000 - 0x197eb2fff libxslt.1.dylib arm64  <d4d14fddc95e390d8d6b0f647acefbdc> /usr/lib/libxslt.1.dylib
+0x197eb3000 - 0x197f94fff WebKitLegacy arm64  <20b8c9cf5b3b3564b1e90113ea896db1> /System/Library/PrivateFrameworks/WebKitLegacy.framework/WebKitLegacy
+0x197f95000 - 0x19805cfff CoreUI arm64  <f1131a07ecfa3f679c3dd3fd62a1a131> /System/Library/PrivateFrameworks/CoreUI.framework/CoreUI
+0x19805d000 - 0x198084fff DictionaryServices arm64  <059e702327533e2493da8c662ea81790> /System/Library/PrivateFrameworks/DictionaryServices.framework/DictionaryServices
+0x198085000 - 0x198086fff HangTracer arm64  <1fd22f31313d33e3bc2f0b6373a84876> /System/Library/PrivateFrameworks/HangTracer.framework/HangTracer
+0x198087000 - 0x1980d7fff PhysicsKit arm64  <2aeeacbe6a8d3b959f9d09f02a85fc9c> /System/Library/PrivateFrameworks/PhysicsKit.framework/PhysicsKit
+0x1980d8000 - 0x1981b0fff UIFoundation arm64  <80a5a544327033c593c6de75027dd934> /System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+0x1981bd000 - 0x198f49fff UIKit arm64  <0c8f420cd77f39f2a8185a8ddd3c8f0c> /System/Library/Frameworks/UIKit.framework/UIKit
+0x198f99000 - 0x198fbafff NetworkStatistics arm64  <fbdf2cf4373d305584bdf54398fd5613> /System/Library/PrivateFrameworks/NetworkStatistics.framework/NetworkStatistics
+0x199044000 - 0x199178fff CoreMotion arm64  <b4fe074374f13922aaa6833f2278495e> /System/Library/Frameworks/CoreMotion.framework/CoreMotion
+0x1991a7000 - 0x1991b4fff CoreAUC arm64  <d01c24d9a0ef3bf693693d7e49ff32e3> /System/Library/PrivateFrameworks/CoreAUC.framework/CoreAUC
+0x1991b5000 - 0x19974efff MediaToolbox arm64  <3d18249fdd593d5abf9e41ca38cf5f38> /System/Library/Frameworks/MediaToolbox.framework/MediaToolbox
+0x19974f000 - 0x1998eefff Celestial arm64  <2db48a3d1b9c3438beb747c96b6042d2> /System/Library/PrivateFrameworks/Celestial.framework/Celestial
+0x1998ef000 - 0x1998fefff IntlPreferences arm64  <726d4688da7d3df6aa23711f4bc33aea> /System/Library/PrivateFrameworks/IntlPreferences.framework/IntlPreferences
+0x1999ed000 - 0x199b9afff AVFoundation arm64  <e23db4dfb7f0377c9d2baa6a1a259db4> /System/Library/Frameworks/AVFoundation.framework/AVFoundation
+0x19a337000 - 0x19a33cfff ConstantClasses arm64  <566b6f6ad9333f4cb16f3bbf8da935fe> /System/Library/PrivateFrameworks/ConstantClasses.framework/ConstantClasses
+0x19bad7000 - 0x19c13efff ModelIO arm64  <fdffc2b14ab53f3fb430496af426cb36> /System/Library/Frameworks/ModelIO.framework/ModelIO
+0x19c146000 - 0x19c1c7fff CoreSymbolication arm64  <1a84d15d8ec835e6ab65c0cfcaf435a2> /System/Library/PrivateFrameworks/CoreSymbolication.framework/CoreSymbolication
+0x19c261000 - 0x19c290fff GLKit arm64  <dd0f8559665936fda454a0970b05151f> /System/Library/Frameworks/GLKit.framework/GLKit
+0x19d7a1000 - 0x19d7d4fff DataDetectorsCore arm64  <7cf6a2529e2831e488c3708945e314e0> /System/Library/PrivateFrameworks/DataDetectorsCore.framework/DataDetectorsCore
+0x19e913000 - 0x19e98bfff libnetwork.dylib arm64  <0a7b6197b67b32858ab16f65cc8e89bb> /usr/lib/libnetwork.dylib
+0x19f445000 - 0x19f477fff Pegasus arm64  <5815a011d91e3b9ca2ac76caa2245b77> /System/Library/PrivateFrameworks/Pegasus.framework/Pegasus
+0x1a1f64000 - 0x1a22cdfff SceneKit arm64  <1f7b63308a3c39809d873144b526f2a2> /System/Library/Frameworks/SceneKit.framework/SceneKit
+0x1a26a1000 - 0x1a26fdfff CoreBrightness arm64  <45681ca0f8de3889b148b92cd7c379ac> /System/Library/PrivateFrameworks/CoreBrightness.framework/CoreBrightness
+0x1a3885000 - 0x1a389dfff MetalKit arm64  <3e91847c73d533128752a7e1a3a9a0ed> /System/Library/Frameworks/MetalKit.framework/MetalKit
+0x1a661c000 - 0x1a6630fff libCGInterfaces.dylib arm64  <6197c0f084b532d9ad7df20efbf15f09> /System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/Libraries/libCGInterfaces.dylib
+0x1a6631000 - 0x1a68a7fff AudioCodecs arm64  <f448cadf08d43882a76f583a2b694097> /System/Library/Frameworks/AudioToolbox.framework/AudioCodecs
+0x1a7514000 - 0x1a7522fff AppleFSCompression arm64  <d390dfb23092338c9452195e007afcb0> /System/Library/PrivateFrameworks/AppleFSCompression.framework/AppleFSCompression
+0x1a892b000 - 0x1a8937fff libGSFontCache.dylib arm64  <62002ad71b7a323a9d385a43dde68a66> /System/Library/PrivateFrameworks/FontServices.framework/libGSFontCache.dylib
+0x1a8938000 - 0x1a8969fff libTrueTypeScaler.dylib arm64  <725a2ff41d7f315b834d14c969050ea8> /System/Library/PrivateFrameworks/FontServices.framework/libTrueTypeScaler.dylib
+0x1ab332000 - 0x1ab50dfff libFosl_dynamic.dylib arm64  <824eea765c503ac1ba0917abf74f38db> /usr/lib/libFosl_dynamic.dylib
+0x1ab91c000 - 0x1ab94bfff libpcap.A.dylib arm64  <5e8e5836c6ee38109cf607fcb398671a> /usr/lib/libpcap.A.dylib
+0x1ab987000 - 0x1aba5bfff AVFAudio arm64  <291f828312d038c9aecd48a7069cc790> /System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/AVFAudio
+0x1abce3000 - 0x1abd06fff UserNotifications arm64  <23ee04a6460836929ab4494c2bffe5d9> /System/Library/Frameworks/UserNotifications.framework/UserNotifications
+0x1ac204000 - 0x1ac38afff TextureIO arm64  <c761c83a9d3d353793a765e1a66164d9> /System/Library/PrivateFrameworks/TextureIO.framework/TextureIO
+0x1ad631000 - 0x1ad6c8fff AGXMetalA9 arm64  <ec261d3019803059b90d25ca0ac4b737> /System/Library/Extensions/AGXMetalA9.bundle/AGXMetalA9
+0x1ad6eb000 - 0x1ad6fdfff libBNNS.dylib arm64  <c5b5b579660333878b35b237714132e3> /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libBNNS.dylib
+0x1ad6fe000 - 0x1ad703fff libQuadrature.dylib arm64  <f96735a958f531ee83765f2237d3a0da> /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libQuadrature.dylib
+0x1ada80000 - 0x1ada91fff CoreEmoji arm64  <7b72c0afc47f32988794951dca896329> /System/Library/PrivateFrameworks/CoreEmoji.framework/CoreEmoji
+0x1ae03c000 - 0x1ae104fff NLP arm64  <5de1e299b3043ddeb78d5a1504bae28e> /System/Library/PrivateFrameworks/NLP.framework/NLP
+0x1aef76000 - 0x1aefe7fff libate.dylib arm64  <9d78bbf324af3a19b869f1f95ccbba0f> /usr/lib/libate.dylib
+0x1aefe8000 - 0x1aefe8fff libcoretls.dylib arm64  <c50a55eeb4fc36d3964e983efbf9866d> /usr/lib/libcoretls.dylib
+0x1aefe9000 - 0x1aefeafff libcoretls_cfhelpers.dylib arm64  <f7d161c350483e84a2a2e5c4c7dc30f5> /usr/lib/libcoretls_cfhelpers.dylib
+
+EOF
+
